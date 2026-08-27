@@ -1,0 +1,109 @@
+# =========================
+# Environment Variables
+# =========================
+
+.env
+.env.*
+!.env.example
+
+
+# =========================
+# Virtual Environment
+# =========================
+
+venv/
+.venv/
+env/
+
+
+# =========================
+# Python
+# =========================
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+
+# =========================
+# Testing
+# =========================
+
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+
+# =========================
+# IDE
+# =========================
+
+.idea/
+.vscode/
+
+*.iml
+
+
+# =========================
+# OS
+# =========================
+
+.DS_Store
+Thumbs.db
+
+
+# =========================
+# Logs
+# =========================
+
+*.log
+logs/
+
+
+# =========================
+# Local Credentials
+# =========================
+
+credentials.json
+token.json
+client_secret*.json
+google_credentials.json
+
+
+# =========================
+# Local OAuth / Tokens
+# =========================
+
+.oauth/
+.tokens/
+*.token
+
+
+# =========================
+# Temporary Files
+# =========================
+
+*.tmp
+*.temp
+*.bak
+
+
+# =========================
+# Build / Distribution
+# =========================
+
+build/
+dist/
+*.egg-info/
+
+
+# =========================
+# Local Database Files
+# =========================
+
+*.db
+*.sqlite
+*.sqlite3

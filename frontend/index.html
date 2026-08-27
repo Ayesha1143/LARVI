@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Larvi — AI Email & Calendar Assistant</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="app-shell">
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <div class="brand-mark">✿</div>
+            <div class="sidebar-brand-text">
+                <h1>larvi</h1>
+                <span>AI assistant</span>
+            </div>
+        </div>
+
+        <div class="sidebar-section agents-section">
+            <div class="sidebar-label">AGENTS</div>
+
+            <div class="agent-nav active">
+                <span class="nav-icon">✉</span>
+                <span>email agent</span>
+            </div>
+
+            <div class="agent-nav">
+                <span class="nav-icon">▣</span>
+                <span>calendar agent</span>
+            </div>
+        </div>
+
+        <div class="sidebar-section connection-section">
+            <div class="sidebar-label">CONNECTIONS</div>
+
+            <button class="connection-pill" id="connectGoogleBtn" type="button">
+                <span class="connection-dot"></span>
+                <span class="connection-icon">✉</span>
+                <span id="gmailStatus">gmail not connected</span>
+            </button>
+
+            <div class="connection-pill">
+                <span class="connection-dot"></span>
+                <span class="connection-icon">▣</span>
+                <span id="calendarStatus">calendar not connected</span>
+            </div>
+        </div>
+
+        <div class="sidebar-profile">
+            <div class="profile-avatar">A</div>
+            <div>
+                <strong>larvi user</strong>
+                <span>personal workspace</span>
+            </div>
+        </div>
+    </aside>
+
+    <main class="larvi-app">
+        <header class="chat-header">
+            <div class="mobile-brand">
+                <div class="larvi-logo">
+                    <span>✿</span>
+                    <span class="online-dot"></span>
+                </div>
+                <div class="brand-info">
+                    <h1>larvi</h1>
+                    <span>active now</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="messages" id="messages">
+            <div class="welcome-message">
+                <div class="welcome-logo">✿</div>
+                <h2>hi, i'm larvi</h2>
+                <p>
+                    your autonomous email &amp; calendar assistant.
+                    tell me what you need and i'll take care of it.
+                </p>
+
+                <div class="welcome-actions">
+                    <button class="quick-action" data-prompt="Show me my latest emails">latest emails</button>
+                    <button class="quick-action" data-prompt="What meetings do I have today?">today's calendar</button>
+                    <button class="quick-action" data-prompt="Summarize my unread emails">unread summary</button>
+                </div>
+            </div>
+
+            <div class="date-divider">
+                <span></span>
+                <em>today</em>
+                <span></span>
+            </div>
+
+            <div id="dynamicMessages"></div>
+        </section>
+
+        <div class="quick-actions-bar">
+            <button class="quick-chip" data-prompt="What's on my calendar today?">what's on my calendar today?</button>
+            <button class="quick-chip" data-prompt="Summarize my unread emails">summarize unread emails</button>
+            <button class="quick-chip" data-prompt="Show me my latest emails">latest emails</button>
+        </div>
+
+        <div class="typing-indicator hidden" id="typingIndicator">
+            <div class="typing-avatar">✿</div>
+            <div class="typing-content">
+                <div class="typing-dots"><span></span><span></span><span></span></div>
+                <span>larvi is thinking...</span>
+            </div>
+        </div>
+
+        <footer class="input-area">
+            <div class="input-wrapper">
+                <textarea id="messageInput" rows="1"
+                    placeholder="ask larvi to check email or your calendar..."
+                    aria-label="Message Larvi"></textarea>
+                <button id="sendButton" class="send-button" type="button" aria-label="Send message">
+                    <span>➤</span>
+                </button>
+            </div>
+            <p class="input-hint">enter to send · shift + enter for a new line</p>
+        </footer>
+    </main>
+</div>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
